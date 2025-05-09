@@ -1,4 +1,4 @@
-const sqlite3 = require('sqlite3').verbose();
+import sqlite3 from 'sqlite3';
 const db = new sqlite3.Database('albums.db');
 
 db.serialize(() => {
@@ -12,11 +12,11 @@ db.serialize(() => {
 
   db.get("SELECT COUNT(*) as count FROM albums", (err, row) => {
     if (row.count === 0) {
-      db.run(`INSERT INTO albumok (zenekar, cim, ev, mufaj) VALUES
+      db.run(`INSERT INTO albums (zenekar, cim, ev, mufaj) VALUES
         ('Metallica', 'Master of Puppets', 1986, 'Metal'),
         ('Coldplay', 'Parachutes', 2000, 'Pop Rock')`);
     }
   });
 });
 
-module.exports = db;
+export default db;

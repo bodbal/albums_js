@@ -39,6 +39,7 @@
 </head>
 <body>
   <h1>Album Nyilvántartó</h1>
+  <script src="../app.js"></script>
 
   <form id="albumForm">
     <input type="text" name="band" placeholder="Zenekar neve" required>
@@ -51,15 +52,16 @@
   <h2>Albumok</h2>
   <% albumok.forEach(album => { %>
     <div class="album">
-      <p><strong>Zenekar:</strong> <%= album.zenekar %></p>
-      <p><strong>Album címe:</strong> <%= album.cim %></p>
-      <p><strong>Megjelenési év:</strong> <%= album.ev %></p>
-      <p><strong>Műfaj:</strong> <%= album.mufaj %></p>
+      <p><strong>Zenekar:</strong> <%= albums.zenekar %></p>
+      <p><strong>Album címe:</strong> <%= albums.cim %></p>
+      <p><strong>Megjelenési év:</strong> <%= albums.ev %></p>
+      <p><strong>Műfaj:</strong> <%= albums.mufaj %></p>
       <div class="buttons">
         <button>Módosítás</button>
         <button>Törlés</button>
       </div>
     </div>
   <% }) %>
+  
 </body>
 </html>
