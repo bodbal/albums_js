@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Album Nyilvántartó</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Album Nyilvántartó</h1>
+
+  <form id="albumForm">
+    <input type="text" id="band" placeholder="Zenekar" required>
+    <input type="text" id="title" placeholder="Album címe" required>
+    <input type="number" id="year" placeholder="Megjelenési év" required>
+    <input type="text" id="genre" placeholder="Műfaj" required>
+    <button type="submit">Hozzáadás</button>
+  </form>
+
+  <div id="error" class="error"></div>
+  <ul id="albumList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
