@@ -49,7 +49,7 @@ async function loadAlbums() {
     li.innerHTML = `
       <strong>${album.band} - ${album.title}</strong> (${album.year}, ${album.genre})
       <button onclick="editAlbum(${album.id})">Szerkesztés</button>
-      <button onclick="deleteAlbum(${album.id}) id="delete">Törlés</button>
+      <button onclick="deleteAlbum(${album.id})">Törlés</button>
     `;
     albumList.appendChild(li);
   });
